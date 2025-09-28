@@ -27,51 +27,66 @@
             border-bottom: 1px solid pink;
             padding: 0.5rem 0;
         }
+        hgroup { margin: 0; }
+        hgroup > h1 { margin: 0; }
+        hgroup > h2 {
+            margin: 0;
+            font-weight: normal;
+            font-size: 1rem;
+            color: darkslateblue;
+        }
     </style>
     <title>ET - Kitchen Sink</title>
 </head>
 <body>
 <!-- Exploring HTML Elements -->
     <header>
-        <h1>Exploring HTML Elements</h1>
+        <hgroup>
+            <h1>Exploring HTML Elements</h1>
+            <h2>Kitchen-sink lab & validation demo</h2>
+        </hgroup>
     </header>
-    <article>
-        <h2>Current Date and Time</h2>
-        <p> &rArr; <time datetime="">loading…</time></p>
-        <script>
-            (function () {
-                const root = document.currentScript.closest('article');
-                const el = root.querySelector('time');
-                const update = () => {
-                    const d = new Date();
-                    el.dateTime = d.toISOString();
-                    el.textContent = d.toLocaleString();
-                };
-                update();
-                setInterval(update, 1000);
-            }());
-        </script>
-    </article>
-    <aside>
-        <h2>Better Sleep Tips</h2>
-        <p> I am working on bettering my sleep schedule as it directly impacts
-            productivity and mood, here is some things im trying to implement!</p>
-        <ul>
-            <li><strong>Same bedtime, same wake time.</strong> The human brain works well with routines.</li>
-            <li><strong>Light matters:</strong> Morning light = “wake up”, dim lights 1–2h before bed.</li>
-            <li><strong>Caffeine cutoff:</strong> None after ~8 hours before bedtime (I struggle here).</li>
-            <li><strong>Bed = sleep.</strong> If not asleep in 20 min, get up, read, then try again.</li>
-            <li><strong>Phones down:</strong> PUT IT AWAY (blue light + doomscroll = BAD SLEEP️).</li>
-        </ul>
-    </aside>
+    <main>
+        <article>
+            <h3>Current Date and Time</h3>
+            <p> &rArr; <time datetime="">loading…</time></p>
+            <script>
+                (function () {
+                    const root = document.currentScript.closest('article');
+                    const el = root.querySelector('time');
+                    const update = () => {
+                        const d = new Date();
+                        el.dateTime = d.toISOString();
+                        el.textContent = d.toLocaleString();
+                    };
+                    update();
+                    setInterval(update, 1000);
+                }());
+            </script>
+        </article>
+        <aside>
+            <h4>Better Sleep Tips</h4>
+            <p> I am working on bettering my sleep schedule as it directly impacts
+                productivity and mood, here is some things im trying to implement!</p>
+            <ul>
+                <li><strong>Same bedtime, same wake time.</strong> The human brain works well with routines.</li>
+                <li><strong>Light matters:</strong> Morning light = “wake up”, dim lights 1–2h before bed.</li>
+                <li><strong>Caffeine cutoff:</strong> None after ~8 hours before bedtime (I struggle here).</li>
+                <li><strong>Bed = sleep.</strong> If not asleep in 20 min, get up, read, then try again.</li>
+                <li><strong>Phones down:</strong> PUT IT AWAY (blue light + doomscroll = BAD SLEEP️).</li>
+            </ul>
+        </aside>
+        <h5> header 5 </h5>
+        <h6> header 6 </h6>
 
-<img src="flower.png" alt="test" width="32" height="32">
-    <address>
-        <strong>Contact Information:</strong> Eden Tripp<br>
-        <a href="mailto:edentripp@sandiego.edu">edentripp@sandiego.edu</a><br>
-        <a href="tel:+13035057408">+1 (303) 505-7408</a><br>
-        University of San Diego
-    </address>
+    <img src="flower.png" alt="test" width="32" height="32">
+        <address>
+            <strong>Contact Information:</strong> Eden Tripp<br>
+            <a href="mailto:edentripp@sandiego.edu">edentripp@sandiego.edu</a><br>
+            <a href="tel:+13035057408">+1 (303) 505-7408</a><br>
+            University of San Diego
+        </address>
+    </main>
     <footer>
         <p>
             Websites flower icon made by <a href="https://www.freepik.com" target="_blank" rel="noopener">Freepik</a>
