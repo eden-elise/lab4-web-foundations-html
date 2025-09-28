@@ -13,13 +13,38 @@
     <style>
         h1 { color: lightskyblue; }
         img { max-width: 100%; height: auto; display: inline-block; }
+        article {
+            border: 2px solid #999;
+            padding: 0.75rem 1rem;
+            border-radius: 8px;
+            margin: 1rem 0;
+            box-sizing: border-box;
+        }
     </style>
     <title>ET - Kitchen Sink</title>
 </head>
 <body>
 <!-- Exploring HTML Elements -->
     <h1>Exploring HTML Elements</h1><hr>
-    <img src="flower.png" alt="test" width="32" height="32">
+    <article>
+        <h2>Current Date and Time</h2>
+        <p> &rArr; <time datetime="">loading…</time></p>
+        <script>
+            (function () {
+                const root = document.currentScript.closest('article');
+                const el = root.querySelector('time');
+                const update = () => {
+                    const d = new Date();
+                    el.dateTime = d.toISOString();
+                    el.textContent = d.toLocaleString();
+                };
+                update();
+                setInterval(update, 1000);
+            }());
+        </script>
+    </article>
+
+<img src="flower.png" alt="test" width="32" height="32">
     <address>
         <strong>Contact Information:</strong> Eden Tripp<br>
         <a href="mailto:edentripp@sandiego.edu">edentripp@sandiego.edu</a><br>
