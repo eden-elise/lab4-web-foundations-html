@@ -46,18 +46,19 @@
             <p>Kitchen-sink lab & validation demo</p>
         </hgroup>
     </header>
-    <nav>
-        <!-- I could not figure how to get nav links to play well live the <base> tag,
-        I fear I may misunderstand the use and point of the base tag. The work around was
-        making the nav links link back to the actual page-->
-        <a href="../docs/index.html#time"        target="_self">Time</a>
-        <a href="../docs/index.html#about"       target="_self">About</a>
-        <a href="../docs/index.html#sleep"       target="_self">Sleep Tips</a>
-        <a href="../docs/index.html#bedtime"     target="_self">Bedtime</a>
-        <a href="../docs/index.html#validation"  target="_self">Validation Images</a>
-        <a href="../docs/index.html#contact"     target="_self">Contact</a>
-    </nav>
-    <main>
+<nav>
+    <menu>
+        <li><a href="../docs/index.html#time">Time</a></li>
+        <li><a href="../docs/index.html#about">About</a></li>
+        <li><a href="../docs/index.html#sleep">Sleep Tips</a></li>
+        <li><a href="../docs/index.html#bedtime">Bedtime</a></li>
+        <li><a href="../docs/index.html#bedtime-log">Bedtime Log Example</a></li>
+        <li><a href="../docs/index.html#validation">Validation Images</a></li>
+        <li><a href="../docs/index.html#contact">Contact</a></li>
+    </menu>
+</nav>
+
+<main>
         <search>
             <form role="search" action="https://www.google.com/search" method="get">
                 <label for="q">Search</label>
@@ -65,8 +66,8 @@
                 <button type="submit">Go</button>
             </form>
         </search>
-        <section id="about" aria-labelledby="about-title">
-            <h2 id="about-title">About This Page</h2>
+        <section id="about">
+            <h2>About This Page</h2>
             <p>This lab page demonstrates core HTML elements and validates cleanly.</p>
 
             <h3>Important terms</h3>
@@ -119,7 +120,20 @@
                 <li>Lights out at a consistent time.</li>
             </ol>
         </section>
-        <h5> fun fact </h5>
+        <section id="bedtime-log">
+            <h3>Preformatted Bedtime Log</h3>
+            <pre><code>
+            Time     Task
+            -------  ----------------------------
+            9:00  PM  STOP HOMEWORK
+            9:15  PM  Lights dim / phone away
+            9:20  PM  Shower, brush teeth & wash face
+            9:50  PM  Set clothes for tomorrow
+            10:00 PM  Read (10–15 minutes)
+            10:15 PM  Lights out
+            </code></pre>
+        </section>
+        <h5> Random fun fact </h5>
         <blockquote cite="https://www.sciencefocus.com/science/fun-facts">
             “The fear of long words is called Hippopotomonstrosesquippedaliophobia.”
             <footer>— <cite><a href="https://www.sciencefocus.com/science/fun-facts" target="_blank" rel="noopener">BBC Science Focus – Fun Facts</a></cite></footer>
