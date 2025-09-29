@@ -53,6 +53,7 @@
         <a href="../docs/index.html#time"        target="_self">Time</a>
         <a href="../docs/index.html#about"       target="_self">About</a>
         <a href="../docs/index.html#sleep"       target="_self">Sleep Tips</a>
+        <a href="../docs/index.html#validation"  target="_self">Validation Images</a>
         <a href="../docs/index.html#contact"     target="_self">Contact</a>
     </nav>
     <main>
@@ -80,7 +81,7 @@
 
         <article id="time">
             <h3>Current Date and Time</h3>
-            <p> &rArr; <time>loading…</time></p>
+            <p> &rArr; <time datetime="2025-01-01T00:00:00Z">loading…</time></p>
             <script>
                 (function () {
                     const root = document.currentScript.closest('article');
@@ -113,9 +114,30 @@
             <footer>— <cite><a href="https://www.sciencefocus.com/science/fun-facts" target="_blank" rel="noopener">BBC Science Focus – Fun Facts</a></cite></footer>
         </blockquote>
 
-        <h6> header 6 </h6>
+        <section id="validation">
+            <h2>HTML Validation Results </h2>
+            <h6>From Beginning of Lab</h6>
+            <figure>
+                <img src="validation-fail.png"
+                     alt="Validator report showing errors on the page"
+                     width="800" height="240">
+                <figcaption>
+                    <strong>Before Validation Check:</strong> Fails for multiple reasons.
+                </figcaption>
+            </figure>
 
-    <img src="flower.png" alt="test" width="32" height="32">
+            <figure>
+                <img src="validation-pass.png"
+                     alt="Validator report showing only one error for the deprecated marquee"
+                     width="800" height="240">
+                <figcaption>
+                    <strong>After:</strong> Passes validation except for <code>&lt;marquee&gt;</code> which is deprecated.
+                </figcaption>
+            </figure>
+        </section>
+
+
+        <img src="flower.png" alt="test" width="32" height="32">
         <address id="contact">
             <strong>Contact Information:</strong> Eden Tripp<br>
             <a href="mailto:edentripp@sandiego.edu">edentripp@sandiego.edu</a><br>
