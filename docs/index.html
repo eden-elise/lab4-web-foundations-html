@@ -112,17 +112,37 @@
                 <li><strong>Bed = sleep.</strong> If not asleep in 20 min, get up, read, then try again.</li>
                 <li><strong>Phones down:</strong> PUT IT AWAY (blue light + doomscroll = BAD SLEEP️).</li>
             </ul>
+            <p>
+                Sleep Duration Goal: target <data value="480">8 hours</data>. <!-- 8hrs = 480 minutes -->
+            </p>
         </aside><hr>
         <section id="bedtime">
             <h4>Simple Bedtime Routine</h4>
-            <ol>
-                <li>Dim lights and put phone away.</li>
-                <li>Brush teeth, wash face.</li>
-                <li>Set out clothes for tomorrow.</li>
-                <li>Read 10–15 minutes.</li>
-                <li>Lights out at a consistent time.</li>
+            <!-- use of data-* attributes -->
+            <ol id="bedtime-steps" data-routine="bedtime" data-target-minutes="45">
+                <li data-min="5">Dim lights and put phone away(5 min).</li>
+                <li data-min="10">Brush teeth, wash face(10 min).</li>
+                <li data-min="5">Set out clothes for tomorrow(5 min).</li>
+                <li data-min="15">Read 10–15 minutes(15 min).</li>
+                <li data-min="5">Lights out - at a consistent time(5 min).</li>
             </ol>
-        </section>
+            <p><strong>Total routine time:</strong> <span id="routine-total">calculating…</span> minutes</p>
+        </section><hr>
+        <!-- javaScript for the sleep bedtime routine total -->
+        <script>
+            (function () {
+                const list = document.getElementById('bedtime-steps');
+                if (!list) return;
+
+                const mins = Array.from(list.querySelectorAll('li'))
+                    .map(li => Number(li.dataset.min) || 0)
+                    .reduce((a, b) => a + b, 0);
+
+                const out = document.getElementById('routine-total');
+                if (out) out.textContent = String(mins);
+            }());
+        </script>
+
         <section id="bedtime-log">
             <h3>Preformatted Bedtime Log</h3>
             <pre><code>
@@ -136,6 +156,7 @@
             10:15 PM  Lights out
             </code></pre>
         </section>
+
         <h5> Random fun fact </h5>
         <blockquote cite="https://www.sciencefocus.com/science/fun-facts">
             “The fear of long words is called Hippopotomonstrosesquippedaliophobia.”
