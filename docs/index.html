@@ -61,6 +61,7 @@
 <main>
         <search>
             <form role="search" action="https://www.google.com/search" method="get">
+                <p>Tip: press <kbd>/</kbd> to jump to the search box.</p> <!-- Not implementing the javaScript for -->
                 <label for="q">Search</label>
                 <input id="q" name="q" type="search" placeholder="Search the web…">
                 <button type="submit">Go</button>
@@ -108,13 +109,12 @@
             <ul>
                 <li><strong>Same bedtime, same wake time.</strong> The human brain works well with routines.</li>
                 <li><strong>Light matters:</strong> Morning light = “wake up”, dim lights 1–2h before bed.</li>
-                <li><b>Caffeine cutoff:</b> None after ~8 hours before bedtime (I struggle here).</li>
+                <li><b>Caffeine cutoff:</b> None after <mark>~8 hours before bedtime</mark> (I struggle here).</li>
                 <li><strong>Bed = sleep.</strong> If not asleep in 20 min, get up, read, then try again.</li>
                 <li><strong>Phones down:</strong> <em>PUT IT AWAY</em> (blue light + doomscroll = BAD SLEEP️).</li>
+                <li><strong><ruby>Melatonin<rp>(</rp><rt>meh-LAH-toh-nin</rt><rp>)</rp></ruby></strong> is your friend—timing matters.</li>
             </ul>
-            <p>
-                Sleep Duration Goal: target <data value="480">8 hours</data>. <!-- 8hrs = 480 minutes -->
-            </p>
+            <p>Sleep Duration Goal: target <data value="480">8 hours</data>. <!-- 8hrs = 480 minutes --></p>
         </aside><hr>
         <section id="bedtime">
             <h4>Simple Bedtime Routine</h4>
@@ -123,7 +123,7 @@
                 <li data-min="5">Dim lights and put phone away(5 min).</li>
                 <li data-min="10">Brush teeth, wash face(10 min).</li>
                 <li data-min="5">Set out clothes for tomorrow(5 min).</li>
-                <li data-min="15">Read 10–15 minutes(15 min).</li>
+                <li data-min="15">Read 10–15 minutes(15 min), as my roomie Emma says <q>I cannot read longer the 10 minutes without falling asleep</q></li>
                 <li data-min="5">Lights out - at a consistent time(5 min).</li>
             </ol>
             <p><strong>Total routine time:</strong> <span id="routine-total">calculating…</span> minutes</p>
