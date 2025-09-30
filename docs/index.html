@@ -192,8 +192,52 @@
             </figure>
         </section>
 
+        <section id="media">
+            <h2>Media Demos</h2>
+            <figure>
+                <img
+                        src="ElleryAndMe.JPG"
+                        alt="Two sisters smiling at sunset in front of a fence and mountains"
+                        usemap="#ellery-map"
+                        width="1365" height="2048">
+                <figcaption>Click us to jump to a short note.</figcaption>
+            </figure>
 
-        <img src="flower.png" alt="test" width="32" height="32">
+            <map name="ellery-map" id="ellery-map">
+                <area shape="rect"
+                      coords="260,1080,1110,1830"
+                      href="../docs/index.html#sister"
+                      alt="About my sister">
+            </map>
+            <hr>
+            <figure>
+                <figcaption>Charlie video</figcaption>
+                <video controls playsinline preload="metadata" width="480">
+                    <source src="charlieVideo.MOV" type="video/quicktime">
+                    Sorry, your browser can’t play this embedded video.
+                    <a href="charlieVideo.MOV">Open / download the MOV</a>.
+                </video>
+                <!-- Couldn't figure out how to get the video to play -->
+            </figure>
+
+            <hr>
+
+            <figure>
+                <figcaption>Charlie — audio only (placeholder)</figcaption>
+                <audio controls preload="none">
+                    <!-- No sources on purpose; just demonstrating <audio> usage -->
+                    Your browser can’t play this audio here. (No audio source provided.)
+                </audio>
+            </figure>
+        </section>
+
+
+        <section id="sister">
+            <h3>My Sister</h3>
+            <p>This is my sister—she is my role model.</p>
+        </section>
+
+    <img src="flower.png" alt="test" width="32" height="32">
         <address id="contact">
             <strong>Contact Information:</strong> Eden Tripp<br>
             <a href="mailto:edentripp@sandiego.edu">edentripp@sandiego.edu</a><br>
