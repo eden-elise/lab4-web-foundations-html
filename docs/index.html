@@ -8,8 +8,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Eden Tripp">
-    <base href="../lab4media/">
-    <link rel="icon" href="flower.png" type="image/png" sizes="any">
+    <!--<base href="docs/"> could not figure this out-->
+    <link rel="icon" href="lab4media/flower.png" type="image/png">
     <style>
         h1 { color: lightskyblue; }
         img { max-width: 100%; height: auto; display: inline-block; }
@@ -54,17 +54,17 @@
     </header>
 <nav>
     <menu>
-        <li><a href="../docs/index.html#about">About</a></li>
-        <li><a href="../docs/index.html#tiny-table">Table</a></li>
-        <li><a href="../docs/index.html#time">Current Time</a></li>
-        <li><a href="../docs/index.html#sleep">Sleep Tips</a></li>
-        <li><a href="../docs/index.html#bedtime">Bedtime Routine</a></li>
-        <li><a href="../docs/index.html#bedtime-log">Bedtime Log</a></li>
-        <li><a href="../docs/index.html#form-mini">Form Demo</a></li>
-        <li><a href="../docs/index.html#validation">Validation</a></li>
-        <li><a href="../docs/index.html#media">Media Demos</a></li>
-        <li><a href="../docs/index.html#sister">My Sister</a></li>
-        <li><a href="../docs/index.html#contact">Contact</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#tiny-table">Table</a></li>
+        <li><a href="#time">Current Time</a></li>
+        <li><a href="#sleep">Sleep Tips</a></li>
+        <li><a href="#bedtime">Bedtime Routine</a></li>
+        <li><a href="#bedtime-log">Bedtime Log</a></li>
+        <li><a href="#form-mini">Form Demo</a></li>
+        <li><a href="#validation">Validation</a></li>
+        <li><a href="#media">Media Demos</a></li>
+        <li><a href="#sister">My Sister</a></li>
+        <li><a href="#contact">Contact</a></li>
     </menu>
 </nav>
 
@@ -267,8 +267,8 @@
                 <fieldset>
                     <legend>Tonight</legend>
                     <p>
-                        <label for="bedtime">Bedtime</label>
-                        <input id="bedtime" type="time" list="bt-suggestions">
+                        <label for="bedtime-time">Bedtime</label>
+                        <input id="bedtime-time" type="time" list="bt-suggestions" name="bedtime">
                         <datalist id="bt-suggestions">
                             <option value="21:30">
                             <option value="22:00">
@@ -331,18 +331,14 @@
             <h2>HTML Validation Results </h2>
             <h6>From Beginning of Lab</h6>
             <figure>
-                <img src="validation-fail.png"
-                     alt="Validator report showing errors on the page"
-                     width="800" height="240">
+                <img src="lab4media/validation-fail.png" alt="Validator report showing errors on the page" width="800" height="240">
                 <figcaption>
                     <strong>Before Validation Check:</strong> Fails for multiple reasons.
                 </figcaption>
             </figure>
 
             <figure>
-                <img src="validation-pass.png"
-                     alt="Validator report showing only one error for the deprecated marquee"
-                     width="800" height="240">
+                <img src="lab4media/validation-pass.png" alt="Validator report showing only one error for the deprecated marquee" width="800" height="240">
                 <figcaption>
                     <strong>After:</strong> Passes validation except for <code>&lt;marquee&gt;</code> which is deprecated.
                 </figcaption>
@@ -353,12 +349,11 @@
             <h2>Media Demos</h2>
             <figure>
                 <picture>
-                    <source media="(min-width: 701px)" srcset="ElleryAndMe.JPG">
-                    <img
-                            src="ElleryAndMe.JPG"
-                            alt="Two sisters smiling at sunset in front of a fence and mountains"
-                            usemap="#ellery-map"
-                            width="1365" height="2048">
+                    <source media="(min-width: 701px)" srcset="lab4media/ElleryAndMe.JPG">
+                    <img src="lab4media/ElleryAndMe.JPG"
+                         alt="Two sisters smiling at sunset in front of a fence and mountains"
+                         usemap="#ellery-map"
+                         width="1365" height="2048">
                 </picture>
                 <figcaption>Click the on Ellery and I to jump to a short note.</figcaption>
             </figure>
@@ -366,7 +361,7 @@
             <map name="ellery-map" id="ellery-map">
                 <area shape="rect"
                       coords="260,1080,1110,1830"
-                      href="../docs/index.html#sister"
+                      href="#sister"
                       alt="About my sister">
             </map>
             <hr>
@@ -379,9 +374,9 @@
             <figure>
                 <figcaption>Charlie video</figcaption>
                 <video controls playsinline preload="metadata" width="480">
-                    <source src="charlieVideo.MOV" type="video/quicktime">
+                    <source src="lab4media/charlieVideo.MOV" type="video/quicktime">
                     Sorry, your browser can’t play this embedded video.
-                    <a href="charlieVideo.MOV">Open / download the MOV</a>.
+                    <a href="lab4media/charlieVideo.MOV">Open / download the MOV</a>
                 </video>
                 <!-- Couldn't figure out how to get the video to play -->
             </figure>
@@ -397,8 +392,6 @@
             </figure>
         </section>
 
-
-    <img src="flower.png" alt="test" width="32" height="32">
         <address id="contact">
             <strong>Contact Information:</strong> Eden Tripp<br>
             <a href="mailto:edentripp@sandiego.edu">edentripp@sandiego.edu</a><br>
