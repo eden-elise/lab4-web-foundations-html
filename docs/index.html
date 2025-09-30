@@ -35,6 +35,12 @@
             font-size: 1rem;
             color: darkslateblue;
         }
+        #tiny-table table { border-collapse: collapse; width: 360px; }
+        #tiny-table caption { caption-side: top; font-weight: 600; padding: .4rem 0; text-align: left; }
+        #tiny-table th, #tiny-table td { border: 1px solid #ccc; padding: .4rem .6rem; text-align: left; }
+        #tiny-table thead th { background: #f3f6ff; }
+        #tiny-table tfoot th, #tiny-table tfoot td { background: #fafafa; font-weight: 600; }
+        #tiny-table col:nth-child(1) { background: #fcfcff; }
     </style>
     <title>ET - Kitchen Sink</title>
 </head>
@@ -100,15 +106,6 @@
         <section id="tiny-table">
             <h3>Table</h3>
 
-            <style>
-                #tiny-table table { border-collapse: collapse; width: 360px; }
-                #tiny-table caption { caption-side: top; font-weight: 600; padding: .4rem 0; text-align: left; }
-                #tiny-table th, #tiny-table td { border: 1px solid #ccc; padding: .4rem .6rem; text-align: left; }
-                #tiny-table thead th { background: #f3f6ff; }
-                #tiny-table tfoot th, #tiny-table tfoot td { background: #fafafa; font-weight: 600; }
-                #tiny-table col:nth-child(1) { background: #fcfcff; }
-            </style>
-
             <table>
                 <caption> Minimal Demo</caption>
 
@@ -144,9 +141,7 @@
             </table>
         </section><hr>
 
-
-
-    <article id="time">
+        <article id="time">
             <h3>Current Date and Time</h3>
             <p> &rArr; <time datetime="2025-01-01T00:00:00Z">loading…</time></p>
             <script>
@@ -166,6 +161,7 @@
                 <p><strong>Clock:</strong> JavaScript is off, so the live time can’t update.</p>
             </noscript>
         </article><hr>
+
         <aside id="sleep">
             <h4>Better Sleep Tips</h4>
             <p> I am working on bettering my sleep schedule as it directly impacts
@@ -235,7 +231,66 @@
             10:15 PM  Lights out
             </code></pre>
         </section>
+        <section id="form-mini">
+            <h3> Form Demo</h3>
+            <form>
+                <fieldset>
+                    <legend>Tonight</legend>
+                    <p>
+                        <label for="bedtime">Bedtime</label>
+                        <input id="bedtime" type="time" list="bt-suggestions">
+                        <datalist id="bt-suggestions">
+                            <option value="21:30">
+                            <option value="22:00">
+                            <option value="22:30">
+                        </datalist>
+                    </p>
+                    <p>
+                        <label for="read">Reading (min)</label>
+                        <input id="read" type="number" value="15" min="0" max="60">
+                    </p>
 
+                    <p>
+                        <label for="drink">Drink</label>
+                        <select id="drink">
+                            <optgroup label="Caffeinated">
+                                <option>Coffee</option>
+                                <option>Black tea</option>
+                            </optgroup>
+                            <optgroup label="Better">
+                                <option selected>Herbal tea</option>
+                                <option>Water</option>
+                            </optgroup>
+                        </select>
+                    </p>
+
+                    <p>
+                        <strong>Total pre-bed minutes:</strong>
+                        <output id="total">25</output>
+                    </p>
+
+                    <p>
+                        <label for="goal">Sleep toward 8h goal</label><br>
+                        <meter id="goal" min="0" max="8" value="6.5">6.5/8</meter>
+                    </p>
+
+                    <p>
+                        <label for="progress">Prep progress</label><br>
+                        <progress id="progress" value="25" max="60">25%</progress>
+                    </p>
+
+                    <p>
+                        <label for="notes">Notes</label><br>
+                        <textarea id="notes" rows="3" cols="28">No screens after 9:15.</textarea>
+                    </p>
+
+                    <p>
+                        <button type="submit">Submit</button>
+                        <button type="reset">Reset</button>
+                    </p>
+                </fieldset>
+            </form>
+        </section>
         <h5> Random fun fact </h5>
         <blockquote cite="https://www.sciencefocus.com/science/fun-facts">
             “The fear of long words is called Hippopotomonstrosesquippedaliophobia.”
