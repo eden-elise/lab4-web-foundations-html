@@ -83,6 +83,13 @@
                 Examples for <code>&lt;sub&gt;</code>,<code>&lt;sup&gt;</code>, and <code>&lt;var&gt;</code>: water is H<sub>2</sub>O; Einstein’s formula
                 <var>E</var>=<var>m</var><var>c</var><sup>2</sup>.
             </p>
+
+            <math>
+                <msup><mi>a</mi><mn>2</mn></msup><mo>+</mo>
+                <msup><mi>b</mi><mn>2</mn></msup><mo>=</mo>
+                <msup><mi>c</mi><mn>2</mn></msup>
+            </math>
+
             <!-- the browser may break at <wbr> spots if needed-->
             <p>Break test: really<wbr>really<wbr>really<wbr>long<wbr>identifier<wbr>name won’t overflow on narrow screens.</p>
 
@@ -107,6 +114,9 @@
                     setInterval(update, 1000);
                 }());
             </script>
+            <noscript>
+                <p><strong>Clock:</strong> JavaScript is off, so the live time can’t update.</p>
+            </noscript>
         </article><hr>
         <aside id="sleep">
             <h4>Better Sleep Tips</h4>
@@ -123,6 +133,17 @@
             <p><u>Starting now</u>: I will set Do Not Disturb nightly so alerts don’t wake me.</p>
             <p>Sleep Duration Goal: target <data value="480">8 hours</data>. <!-- 8hrs = 480 minutes --></p>
         </aside><hr>
+        <figure>
+            <svg viewBox="0 0 200 70" width="280" height="98" role="img" aria-labelledby="svg-title svg-desc">
+                <title id="svg-title">Sleep Well Badge</title>
+                <desc id="svg-desc">Rounded rectangle with a crescent moon and the text Sleep Well.</desc>
+                <rect x="2" y="2" rx="12" ry="12" width="196" height="66" fill="#eef7ff" stroke="#6aa9ff" stroke-width="2"/>
+                <circle cx="48" cy="35" r="16" fill="#ffd34d"/>
+                <circle cx="54" cy="30" r="16" fill="#eef7ff"/>
+                <text x="80" y="42" font-family="system-ui, sans-serif" font-size="18" fill="#1f3b57">Sleep Well</text>
+            </svg>
+            <figcaption>Inline <code>&lt;svg&gt;</code> graphic (no images needed).</figcaption>
+        </figure>
         <section id="bedtime">
             <h4>Simple Bedtime Routine</h4>
             <!-- use of data-* attributes -->
@@ -149,6 +170,9 @@
                 if (out) out.textContent = String(mins);
             }());
         </script>
+        <noscript>
+            <p><strong>Total routine time:</strong> 40 minutes (static fallback).</p>
+        </noscript>
 
         <section id="bedtime-log">
             <h3>Preformatted Bedtime Log</h3>
@@ -195,12 +219,15 @@
         <section id="media">
             <h2>Media Demos</h2>
             <figure>
-                <img
-                        src="ElleryAndMe.JPG"
-                        alt="Two sisters smiling at sunset in front of a fence and mountains"
-                        usemap="#ellery-map"
-                        width="1365" height="2048">
-                <figcaption>Click us to jump to a short note.</figcaption>
+                <picture>
+                    <source media="(min-width: 701px)" srcset="ElleryAndMe.JPG">
+                    <img
+                            src="ElleryAndMe.JPG"
+                            alt="Two sisters smiling at sunset in front of a fence and mountains"
+                            usemap="#ellery-map"
+                            width="1365" height="2048">
+                </picture>
+                <figcaption>Click the on Ellery and I to jump to a short note.</figcaption>
             </figure>
 
             <map name="ellery-map" id="ellery-map">
@@ -210,6 +237,12 @@
                       alt="About my sister">
             </map>
             <hr>
+
+            <section id="sister">
+                <h3>My Sister</h3>
+                <p>This is my sister—she is my role model.</p>
+            </section>
+
             <figure>
                 <figcaption>Charlie video</figcaption>
                 <video controls playsinline preload="metadata" width="480">
@@ -231,11 +264,6 @@
             </figure>
         </section>
 
-
-        <section id="sister">
-            <h3>My Sister</h3>
-            <p>This is my sister—she is my role model.</p>
-        </section>
 
     <img src="flower.png" alt="test" width="32" height="32">
         <address id="contact">
