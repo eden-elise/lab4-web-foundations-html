@@ -188,7 +188,21 @@
             </ul>
             <p><u>Starting now</u>: I will set Do Not Disturb nightly so alerts don’t wake me.</p>
             <p>Sleep Duration Goal: target <data value="480">8 hours</data>. <!-- 8hrs = 480 minutes --></p>
+            <template id="tip-tpl">
+                <li><em>New tip:</em> try a 2-minute breathing break.</li>
+            </template>
+
+            <button id="add-tip">Add a sample sleep tip</button>
+
+            <script>
+                document.getElementById('add-tip').addEventListener('click', () => {
+                    const t = document.getElementById('tip-tpl');
+                    const clone = t.content.cloneNode(true);
+                    document.querySelector('#sleep ul').appendChild(clone);
+                });
+            </script>
         </aside><hr>
+
         <figure>
             <svg viewBox="0 0 200 70" width="280" height="98" role="img" aria-labelledby="svg-title svg-desc">
                 <title id="svg-title">Sleep Well Badge</title>
