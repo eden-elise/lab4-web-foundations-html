@@ -96,9 +96,57 @@
             <div style="border:1px dashed #999; padding:0.5rem; margin-top:0.5rem;">
                 this is a <code>&lt;div&gt;</code> container.
             </div>
-        </section>
+        </section><hr>
+        <section id="tiny-table">
+            <h3>Table</h3>
 
-        <article id="time">
+            <style>
+                #tiny-table table { border-collapse: collapse; width: 360px; }
+                #tiny-table caption { caption-side: top; font-weight: 600; padding: .4rem 0; text-align: left; }
+                #tiny-table th, #tiny-table td { border: 1px solid #ccc; padding: .4rem .6rem; text-align: left; }
+                #tiny-table thead th { background: #f3f6ff; }
+                #tiny-table tfoot th, #tiny-table tfoot td { background: #fafafa; font-weight: 600; }
+                #tiny-table col:nth-child(1) { background: #fcfcff; }
+            </style>
+
+            <table>
+                <caption> Minimal Demo</caption>
+
+                <colgroup>
+                    <col><!-- thing  -->
+                    <col><!-- count  -->
+                </colgroup>
+
+                <thead>
+                <tr>
+                    <th scope="col">Thing</th>
+                    <th scope="col">Count</th>
+                </tr>
+                </thead>
+
+                <tbody>
+                <tr>
+                    <td>Potato</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>Tomato</td>
+                    <td>2</td>
+                </tr>
+                </tbody>
+
+                <tfoot>
+                <tr>
+                    <th scope="row">Total</th>
+                    <td>3</td>
+                </tr>
+                </tfoot>
+            </table>
+        </section><hr>
+
+
+
+    <article id="time">
             <h3>Current Date and Time</h3>
             <p> &rArr; <time datetime="2025-01-01T00:00:00Z">loading…</time></p>
             <script>
@@ -125,7 +173,7 @@
             <ul>
                 <li><strong>Same bedtime, same wake time.</strong> The human brain works well with routines.</li>
                 <li><strong>Light matters:</strong> Morning light = “wake up”, dim lights 1–2h before bed.</li>
-                <li><b>Caffeine cutoff:</b> None after <s>7 hours</s> <mark>~8 hours before bedtime</mark> (I struggle here).</li>
+                <li><b>Caffeine cutoff:</b> None after <del cite="#validation" datetime="2025-09-29">7 hours</del> <ins datetime="2025-09-29">~8 hours before bedtime</ins> (I struggle here).</li>
                 <li><strong>Bed = sleep.</strong> If not asleep in 20 min, get up, read, then try again.</li>
                 <li><strong>Phones down:</strong> <em>PUT IT AWAY</em> (blue light + doomscroll = BAD SLEEP️).</li>
                 <li><strong><ruby>Melatonin<rp>(</rp><rt>meh-LAH-toh-nin</rt><rp>)</rp></ruby></strong> is your friend—timing matters.</li>
